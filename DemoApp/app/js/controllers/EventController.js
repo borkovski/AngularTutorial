@@ -17,22 +17,39 @@ eventsApp.controller('EventController', function EventController($scope) {
                 creatorName: 'Bob Smith',
                 duration: '1 hr',
                 level: 'Advanced',
-                abstract: 'In this session you will learn the ins and outs of directives'
+                abstract: 'In this session you will learn the ins and outs of directives',
+                upVoteCount: 0
             },
             {
                 name: 'Scopes for fun and profit',
                 creatorName: 'John Doe',
                 duration: '30 mins',
                 level: 'Introductory',
-                abstract: 'This session will take a closer look at scopes. Learn what they do, and how to get them to do it for you'
+                abstract: 'This session will take a closer look at scopes. Learn what they do, and how to get them to do it for you',
+                upVoteCount: 0
             },
             {
                 name: 'Well behaved controllers',
                 creatorName: 'Jane Doe',
                 duration: '2 hours',
                 level: 'Intermediate',
-                abstract: 'Controllers are the beginning of everything Angular does offer'
+                abstract: 'Controllers are the beginning of everything Angular does offer',
+                upVoteCount: 0
             }
         ]
-    }
+    };
+
+    $scope.buttonDisabled = true;
+    $scope.snippet = '<span>TEST HTML SNIPPET</span>';
+    $scope.boolValue = false;
+    $scope.mystyle = { color: 'red' };
+    $scope.myclass = 'blue';
+
+    $scope.upVoteSession = function(session) {
+        session.upVoteCount++;
+    };
+
+    $scope.downVoteSession = function (session) {
+        session.upVoteCount--;
+    };
 })
