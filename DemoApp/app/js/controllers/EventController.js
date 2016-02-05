@@ -15,7 +15,7 @@ eventsApp.controller('EventController', function EventController($scope) {
             {
                 name: 'Directives masterclass',
                 creatorName: 'Bob Smith',
-                duration: '1 hr',
+                duration: 2,
                 level: 'Advanced',
                 abstract: 'In this session you will learn the ins and outs of directives',
                 upVoteCount: 0
@@ -23,7 +23,7 @@ eventsApp.controller('EventController', function EventController($scope) {
             {
                 name: 'Scopes for fun and profit',
                 creatorName: 'John Doe',
-                duration: '30 mins',
+                duration: 1,
                 level: 'Introductory',
                 abstract: 'This session will take a closer look at scopes. Learn what they do, and how to get them to do it for you',
                 upVoteCount: 0
@@ -31,7 +31,7 @@ eventsApp.controller('EventController', function EventController($scope) {
             {
                 name: 'Well behaved controllers',
                 creatorName: 'Jane Doe',
-                duration: '2 hours',
+                duration: 3,
                 level: 'Intermediate',
                 abstract: 'Controllers are the beginning of everything Angular does offer',
                 upVoteCount: 0
@@ -39,6 +39,7 @@ eventsApp.controller('EventController', function EventController($scope) {
         ]
     };
 
+    $scope.sortOrder = '-upVoteCount';
     $scope.buttonDisabled = true;
     $scope.snippet = '<span>TEST HTML SNIPPET</span>';
     $scope.boolValue = false;
