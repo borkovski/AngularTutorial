@@ -53,9 +53,9 @@
             Show:
             <select ng-model="query.level" class="input-medium">
                 <option selected value="">All</option>
-                <option value="introductory">Introductory</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
+                <option value="1">Introductory</option>
+                <option value="2">Intermediate</option>
+                <option value="3">Advanced</option>
             </select>
             <ul class="thumbnails">
                 <li ng-repeat="session in event.sessions | orderBy: sortOrder | filter: query">
